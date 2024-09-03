@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smallcase Managers Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f8fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 75px;
+            margin-right: 10px;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #000;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        .sidebar {
+            width: 25%;
+            background-color: #fff;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+
+        .content {
+            width: 75%;
+        }
+
+        .content-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .content-header .tabs {
+            display: flex;
+            align-items: center;
+        }
+
+        .content-header .tabs a {
+            text-decoration: none;
+            color: #000;
+            margin-right: 20px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .content-header .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .content-header .search-bar input {
+            padding: 8px 40px 8px 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            width: 300px;
+        }
+
+        .content-header .search-bar img {
+            position: absolute;
+            right: 10px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .filters {
+            margin-bottom: 20px;
+        }
+
+        .filters h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .filters label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            width: calc(50% - 20px);
+            background-color: #fff;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .card-header img {
+            height: 40px;
+            margin-left: 10px;
+        }
+
+        .card-header h2 {
+            font-size: 20px;
+            margin-right: 15px;
+            flex-grow: 1;
+        }
+
+        .card p {
+            margin: 0;
+            color: #555;
+        }
+
+        .card .tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .tag {
+            background-color: #f1f3f4;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            color: #555;
+        }
+
+        .tag.fundamental {
+            background-color: #eaf3f4;
+            color: #1a73e8;
+        }
+
+        .tag.momentum {
+            background-color: #ffe6e8;
+            color: #d93025;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="smallcase.png" alt="smallcase logo">
+
+        </div>
+        <nav>
+            <a href="#">Discover</a>
+            <a href="#">Watchlist</a>
+            <a href="#">Create</a>
+            <a href="#">Investments</a>
+            <a href="#">More</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="filters">
+                <h3>Filters</h3>
+                <button>Clear All</button>
+                <h3>Investment Strategy</h3>
+                <label><input type="checkbox"> Asset Allocation</label>
+                <label><input type="checkbox"> Corporate Governance</label>
+                <label><input type="checkbox"> Dividend</label>
+                <label><input type="checkbox"> ESG</label>
+                <label><input type="checkbox"> Factor Investing</label>
+                <label><input type="checkbox"> Fundamental</label>
+                <label><input type="checkbox"> Goal Based</label>
+                <label><input type="checkbox"> Growth</label>
+                <label><input type="checkbox"> Momentum</label>
+                <label><input type="checkbox"> Quality</label>
+                <label><input type="checkbox"> Quantamental</label>
+                <label><input type="checkbox"> Quantitative</label>
+                <label><input type="checkbox"> Sector Tracker</label>
+                <label><input type="checkbox"> Technical</label>
+            </div>
+        </aside>
+
+        <div class="content">
+            <div class="content-header">
+                <div class="tabs">
+                    <a href="#" style="color: #1a73e8;">Collections</a>
+                    <a href="#">All smallcases</a>
+                    <a href="#">Managers</a>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="smallcase, mutual fund, stock or manager">
+                    <img src="search.png" alt="Search Icon">
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Windmill Capital</h2>
+                        <img src="windmill.png" alt="Windmill Capital Logo">
+                    </div>
+                    <div class="card-content">
+                        <p>Manages 58 smallcases<br>We’re SEBI registered research analyst creating Thematic &
+                            Quantamental curated stock/ETF portfolios...</p>
+                        <div class="tags">
+                            <span class="tag fundamental">Fundamental</span>
+                            <span class="tag">Sector Tracker</span>
+                            <span class="tag">+13 more strategies</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h2>WeekendInvesting</h2>
+                        <img src="weekend.png" alt="WeekendInvesting Logo">
+                    </div>
+                    <div class="card-content">
+                        <p>Momentum Investing has been synonymous with WeekendInvesting since 2016...</p>
+                        <div class="tags">
+                            <span class="tag momentum">Momentum</span>
+                            <span class="tag">Quantitative</span>
+                            <span class="tag">+2 more strategies</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Niveshaay</h2>
+                        <img src="Niveshaay.png" alt="Niveshaay Logo">
+                    </div>
+                    <div class="card-content">
+                        <p>Niveshaay is a SEBI Registered Investment Advisory Firm with a Dedicated Research Team...</p>
+                        <div class="tags">
+                            <span class="tag">Growth</span>
+                            <span class="tag">Thematic</span>
+                            <span class="tag">+6 more strategies</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Green Portfolio</h2>
+                        <img src="Green Portfolio.png" alt="Green Portfolio Logo">
+                    </div>
+                    <div class="card-content">
+                        <p>Manages 6 smallcases<br>We are an Investment Management Firm Focused on Fundamental
+                            Investing...</p>
+                        <div class="tags">
+                            <span class="tag fundamental">Fundamental</span>
+                            <span class="tag">Quantitative</span>
+                            <span class="tag">+5 more strategies</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Sanjiv Bhasin</h2>
+                        <img src="Sanjiv Bhasin.png" alt="Sanjiv Bhasin Logo">
+                    </div>
+                    <div class="card-content">
+                        <p>Manages 4 smallcases<br>Value-driven and long-term oriented investment strategies focused on
+                            India's growth...</p>
+                        <div class="tags">
+                            <span class="tag">Value</span>
+                            <span class="tag">Long-Term</span>
+                            <span class="tag">+3 more strategies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
